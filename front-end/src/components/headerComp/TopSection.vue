@@ -64,7 +64,7 @@ export default {
                 display: inline-block;
                 margin-top:.4rem;
                 color:$white;
-                font-size:2rem;
+                font-size:2.2rem;
                 font-weight: 700;
                 font-family:'NanumSquare ExtraBold';
                 text-shadow: 2px 2px rgba(0,0,0,0.25);
