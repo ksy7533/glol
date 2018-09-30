@@ -25,6 +25,7 @@ html, body{
 
 html{
   font-size:62.5%;
+  background-color:$deep-purple-lighten-5;
 }
 
 #app {
