@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <v-header></v-header>
+    <v-container></v-container>
   </div>
 </template>
 
 <script>
 import Header from './components/headerComp/Header.vue';
+import Container from './components/containerComp/Container.vue';
 
 export default {
   name: 'app',
   components: {
-    'v-header' : Header
+    'v-header' : Header,
+    'v-container' : Container
   },
 };
 </script>
