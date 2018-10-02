@@ -22,6 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 .container{
+    margin-top:10.4rem;
     padding:2rem;
     &:after{
         @extend %float-clear;
