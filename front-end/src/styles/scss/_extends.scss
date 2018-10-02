@@ -3,3 +3,67 @@
     display: block;
     clear:both;
 }
+
+%box-type-01{
+    box-sizing:border-box;
+    position: relative;
+    padding:2rem;
+    background-color:$white;
+
+    box-shadow:.1rem .1rem .2rem rgba(0,0,0,0.25);
+
+    .top--area{
+        &:after{
+            @extend %float-clear;
+        }
+
+        h2{
+            float:left;
+            font-size:1.8rem;
+            font-weight: 700;
+        }
+
+        .menu{
+            float:left;
+            margin:.3rem 0 0 2rem;
+
+            &:after{
+                @extend %float-clear;
+            }
+
+            li{
+                float:left;
+                position: relative;
+                margin-left:1rem;
+                padding-left:1rem;
+
+                &:first-child{
+                    margin-left:0;
+                    padding-left:0;
+
+                    &:before{
+                        display:none;
+                    }
+                }
+
+                &:before{
+                    content:'';
+                    display: inline-block;
+                    position: absolute;
+                    top:.1rem;
+                    left:0;
+                    width:.1rem;
+                    height:1.1rem;
+                    background-color:$grey-lighten-1;
+                }
+
+                a{
+                    display: inline-block;
+                    color:$black;
+                    font-size:1.4rem;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

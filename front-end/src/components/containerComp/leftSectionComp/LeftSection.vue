@@ -1,11 +1,5 @@
 <template>
     <div class="main--content" :class="$mq">
-        <!-- <div class="player">
-            <h2>플레이어정보</h2>
-            <div class="content">
-                플레이어 정보입니다<br>플레이어 정보입니다<br>플레이어 정보입니다<br>플레이어 정보입니다<br>플레이어 정보입니다<br>플레이어 정보입니다<br>플레이어 정보입니다<br>플레이어 정보입니다<br>플레이어 정보입니다<br>
-            </div>
-        </div> -->
         <div class="score">
             <div class="top--area">
                 <h2>최근게임전적</h2>
@@ -695,81 +689,8 @@ export default {
     float:left;
     width:calc(100% - 640px);
 
-    // .player{
-    //     background-color:$white;
-
-    //     h2{
-    //         padding:2rem;
-    //         font-size:1.8rem;
-    //         font-weight: 700;
-    //         border-bottom:2px solid $grey-lighten-3;
-    //     }
-
-    //     .content{
-    //         margin-top:1.5rem;
-    //     }
-    // }
-
     .score{
-        position: relative;
-        padding:2rem;
-        background-color:$white;
-
-        .top--area{
-
-            &:after{
-                @extend %float-clear;
-            }
-
-            h2{
-                float:left;
-                font-size:1.8rem;
-                font-weight: 700;
-            }
-
-            .menu{
-                float:left;
-                margin:.3rem 0 0 2rem;
-
-                &:after{
-                    @extend %float-clear;
-                }
-
-                li{
-                    float:left;
-                    position: relative;
-                    margin-left:1rem;
-                    padding-left:1rem;
-
-                    &:first-child{
-                        margin-left:0;
-                        padding-left:0;
-
-                        &:before{
-                            display:none;
-                        }
-                    }
-
-                    &:before{
-                        content:'';
-                        display: inline-block;
-                        position: absolute;
-                        top:.1rem;
-                        left:0;
-                        width:.1rem;
-                        height:1.1rem;
-                        background-color:$grey-lighten-1;
-                    }
-
-                    a{
-                        display: inline-block;
-                        color:$black;
-                        font-size:1.4rem;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
+        @extend %box-type-01;
 
         .content{
             margin-top:2rem;
