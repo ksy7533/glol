@@ -13,13 +13,17 @@
                     <li>S7 SILVER</li>
                 </ul>
             </div>
+            <div class="update">
+                <p class="info">마지막 갱신 : 1일전</p>
+                <button class="btn type--01">전체 전적 갱신</button>
+            </div>
         </div>
 
         <div class="score">
             <div class="content">
                 <p class="type">솔로랭크</p>
                 <p class="rank">실버2 / 14LP</p>
-                <p class="figure">200승 / 222패</p>
+                <p class="figure">10전 4승 6패 (40.00%)</p>
                 <p class="league">카르마의 주문술사들</p>
             </div>
             <div class="tier-icon bronze"></div>
@@ -103,6 +107,18 @@ export default {
                 }
             }
         }
+
+        .update{
+            float:right;
+            margin-top:5rem;
+
+            .info{
+                text-align:right;
+                margin-bottom:.4rem;
+                color:$grey;
+                font-size:1.2rem;
+            }
+        }
     }
 
     .score{
@@ -177,6 +193,22 @@ export default {
         .player{
             float:none;
             width:100%;
+
+            .update{
+                margin-top:0;
+                width:100%;
+                
+
+                .info{
+                    text-align:center;
+                    margin:1rem 0 0 0;
+                }
+
+                .btn{
+                    margin-top:1rem;
+                    width:100%
+                }
+            }
         }
 
         .score{

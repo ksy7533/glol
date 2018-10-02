@@ -1,5 +1,5 @@
 <template>
-    <section class="container">
+    <section class="container" :class="$mq">
         <top-section></top-section>
         <left-section></left-section>
         <right-section></right-section>
@@ -26,6 +26,10 @@ export default {
     padding:2rem;
     &:after{
         @extend %float-clear;
+    }
+
+    &.mobile{
+        margin-top:15rem;
     }
 }
 </style>
