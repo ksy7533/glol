@@ -7,12 +7,13 @@
 %box-type-01{
     box-sizing:border-box;
     position: relative;
-    padding:2rem;
     background-color:$white;
 
     box-shadow:.1rem .1rem .2rem rgba(0,0,0,0.25);
 
     .top--area{
+        padding:2rem;
+
         &:after{
             @extend %float-clear;
         }
@@ -63,6 +64,47 @@
                     font-size:1.4rem;
                     text-decoration: none;
                 }
+            }
+        }
+    }
+}
+
+%tbl-type-01{
+    width:100%;
+
+    thead{
+        tr{
+            th{
+                padding:1.2rem 0 1rem;
+                font-size:1.2rem;
+                font-weight:700;
+
+                // border-bottom:2px solid #dbdbdb;
+                
+                color:$white;
+                background-color:$deep-purple-darken-1;
+            }
+        }
+    }
+
+    tbody{
+        tr{
+            &:first-child{
+                td {
+                    border-top:0;
+                }
+            }
+
+            &:nth-of-type(even){
+                background-color:$grey-lighten-4;
+            }
+
+            td{
+                text-align:center;
+                vertical-align: middle;
+                padding:1rem 0;
+                font-size:1.2rem;
+                border-top:1px solid #dbdbdb;
             }
         }
     }

@@ -48,7 +48,8 @@ export default {
     .player{
         @extend %box-type-01;
         float:left;
-        width:calc(100% - 32rem);
+        padding:2rem;
+        width:calc(100% - 64rem);
 
         &:after{
             @extend %float-clear;
@@ -124,7 +125,8 @@ export default {
     .score{
         @extend %box-type-01;
         float:right;
-        width:30rem;
+        padding:2rem;
+        width:62rem;
 
         &:after{
             @extend %float-clear;
@@ -198,7 +200,6 @@ export default {
                 margin-top:0;
                 width:100%;
                 
-
                 .info{
                     text-align:center;
                     margin:1rem 0 0 0;

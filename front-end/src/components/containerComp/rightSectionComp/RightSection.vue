@@ -9,6 +9,86 @@
                 <div class="top--area">
                     <h2>선호 챔피언</h2>
                 </div>
+                <div class="content">
+                    <table>
+                        <colgroup>
+                            <col style="width:25%">
+                            <col style="width:30%">
+                            <col style="width:25%">
+                            <col style="width:20%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>챔피언</th>
+                                <th>KDA / 평점</th>
+                                <th>게임수</th>
+                                <th>승률</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="champion">
+                                    <span class="wrap--img"><img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Aatrox.png" alt=""></span>
+                                    <span class="name">베인</span>
+                                </td>
+                                <td class="score">
+                                    <span class="grade">3.00:1</span>
+                                    <span class="kda">4.5 / 5.5 / 6.0</span>
+                                </td>
+                                <td>2</td>
+                                <td>60%</td>
+                            </tr>
+                            <tr>
+                                <td class="champion">
+                                    <span class="wrap--img"><img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Aatrox.png" alt=""></span>
+                                    <span class="name">베인</span>
+                                </td>
+                                <td class="score">
+                                    <span class="grade">3.00:1</span>
+                                    <span class="kda">4.5 / 5.5 / 6.0</span>
+                                </td>
+                                <td>2</td>
+                                <td>60%</td>
+                            </tr>
+                            <tr>
+                                <td class="champion">
+                                    <span class="wrap--img"><img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Aatrox.png" alt=""></span>
+                                    <span class="name">베인</span>
+                                </td>
+                                <td class="score">
+                                    <span class="grade">3.00:1</span>
+                                    <span class="kda">4.5 / 5.5 / 6.0</span>
+                                </td>
+                                <td>2</td>
+                                <td>60%</td>
+                            </tr>
+                            <tr>
+                                <td class="champion">
+                                    <span class="wrap--img"><img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Aatrox.png" alt=""></span>
+                                    <span class="name">베인</span>
+                                </td>
+                                <td class="score">
+                                    <span class="grade">3.00:1</span>
+                                    <span class="kda">4.5 / 5.5 / 6.0</span>
+                                </td>
+                                <td>2</td>
+                                <td>60%</td>
+                            </tr>
+                            <tr>
+                                <td class="champion">
+                                    <span class="wrap--img"><img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/Aatrox.png" alt=""></span>
+                                    <span class="name">베인</span>
+                                </td>
+                                <td class="score">
+                                    <span class="grade">3.00:1</span>
+                                    <span class="kda">4.5 / 5.5 / 6.0</span>
+                                </td>
+                                <td>2</td>
+                                <td>60%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <div class="box tier--graph">
@@ -43,13 +123,6 @@ export default {
             @extend %float-clear;
         }
 
-        .season--info{
-            @extend %box-type-01;
-            float:left;
-            width:300px;
-            height:450px;
-        }
-
         .tier--graph{
             @extend %box-type-01;
             float:left;
@@ -58,10 +131,51 @@ export default {
             height:450px;
         }
 
+        .season--info{
+            @extend %box-type-01;
+            float:left;
+            width:300px;
+            height:450px;
+
+            .content{
+                table{
+                    @extend %tbl-type-01;
+
+                    tbody{
+                        tr{
+                            td{
+
+                                &.champion{
+                                    .wrap--img{
+                                        display: block;
+                                        margin-bottom:.5rem;
+                                        img{
+                                            width:3rem;
+                                            height:3rem;
+                                        }
+                                    }
+                                }
+
+                                &.score{
+                                    span{
+                                        display: block;
+
+                                        &.kda{
+                                            margin-top:.4rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .mmr{
         @extend %box-type-01;
+        padding:2rem;
         
         .btn{
             width:100%;
@@ -71,6 +185,7 @@ export default {
     footer{
         @extend %box-type-01;
         margin-top:2rem;
+        padding:2rem;
 
         .copyright{
             line-height:1.2rem;

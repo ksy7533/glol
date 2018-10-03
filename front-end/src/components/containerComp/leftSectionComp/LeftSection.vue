@@ -693,35 +693,12 @@ export default {
         @extend %box-type-01;
 
         .content{
-            margin-top:2rem;
-
             table{
-                width:100%;
-
-                thead{
-                    th{
-                        padding:1rem 0;
-                        font-size:1.2rem;
-                        font-weight:700;
-                        border-bottom:2px solid #dbdbdb;
-                    }
-                }
+                @extend %tbl-type-01;
 
                 tbody{
                     tr{
-                        &:first-child{
-                            td {
-                                border-top:0;
-                            }
-                        }
-
                         td{
-                            text-align:center;
-                            vertical-align: middle;
-                            padding:.5rem 0;
-                            font-size:1.2rem;
-                            border-top:1px solid #dbdbdb;
-
                             &:after{
                                 @extend %float-clear;
                             }
@@ -742,7 +719,6 @@ export default {
                             }
 
                             &.champion{
-
                                 .wrap--img{
                                     display: block;
                                     margin-bottom:.5rem;
@@ -825,8 +801,6 @@ export default {
         }
 
         .bottom--area{
-            margin-top:2rem;
-
             .btn{
                 width:100%;
             }
