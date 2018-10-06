@@ -10,6 +10,7 @@
     font-size:1.4rem;
     font-weight:700;
     outline:0;
+    border-radius: .3rem;
     transition: all .2s;
 
     &:hover{
@@ -19,5 +20,18 @@
     &.type--01{
         border:1px solid $deep-purple-lighten-1;
         background-color:$deep-purple-lighten-1;
+    }
+
+    span{
+        display: inline-block;
+        position: relative;
+        padding-right:2.5rem;
+
+        i{
+            position: absolute;
+            top:0;
+            right:0;
+            font-size:1.8rem;
+        }
     }
 }

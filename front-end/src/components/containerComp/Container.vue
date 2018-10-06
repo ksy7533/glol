@@ -22,14 +22,14 @@ export default {
 
 <style lang="scss" scoped>
 .container{
-    margin-top:10.4rem;
-    padding:2rem;
+    padding:12.4rem 2rem 2rem;
+
     &:after{
         @extend %float-clear;
     }
 
     &.mobile{
-        margin-top:15rem;
+        padding-top:17rem;
     }
 }
 </style>

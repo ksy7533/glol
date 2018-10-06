@@ -15,18 +15,47 @@
             </div>
             <div class="update">
                 <p class="info">마지막 갱신 : 1일전</p>
-                <button class="btn type--01">전체 전적 갱신</button>
+                <button class="btn type--01"><span>전체 전적 갱신 <i class="material-icons">autorenew</i></span></button>
             </div>
         </div>
 
         <div class="score">
-            <div class="content">
-                <p class="type">솔로랭크</p>
-                <p class="rank">실버2 / 14LP</p>
-                <p class="figure">10전 4승 6패 (40.00%)</p>
-                <p class="league">카르마의 주문술사들</p>
+            <ul class="menu">
+                <li class="on">
+                    <a href="#n">솔로랭크</a>
+                </li>
+                <li>
+                    <a href="#n">자유랭크</a>
+                </li>
+            </ul>
+            <div class="box left">
+                <div class="content">
+                    <p class="type">솔로랭크</p>
+                    <p class="rank">실버2 / 14LP</p>
+                    <p class="figure">
+                        <span class="total">10</span>전
+                        <span class="win">4</span>승
+                        <span class="loss">6</span>패
+                        <span class="rate">(40.00%)</span>
+                    </p>
+                    <p class="league">카르마의 주문술사들</p>
+                </div>
+                <div class="tier-icon bronze"></div>
             </div>
-            <div class="tier-icon bronze"></div>
+            <div class="box right">
+                <div class="content">
+                    <p class="type">자유랭크</p>
+                    <p class="rank">실버2 / 14LP</p>
+                    <p class="figure">
+                        <span class="total">10</span>전
+                        <span class="win">4</span>승
+                        <span class="loss">6</span>패
+                        <span class="rate">(40.00%)</span>
+                    </p>
+                    <p class="league">카르마의 주문술사들</p>
+                </div>
+                <div class="tier-icon silver"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -53,6 +82,10 @@ export default {
 
         &:after{
             @extend %float-clear;
+        }
+
+        .top--area{
+            padding:0 0 2rem 0;
         }
 
         .wrap-img{
@@ -125,68 +158,162 @@ export default {
     .score{
         @extend %box-type-01;
         float:right;
+        position: relative;
         padding:2rem;
         width:62rem;
+
+        &:before{
+            content:'';
+            position: absolute;
+            top:2rem;
+            left:50%;
+            width:.1rem;
+            height:10rem;
+            background-color:$grey-lighten-3;
+        }
 
         &:after{
             @extend %float-clear;
         }
 
-        .content{
-            float:left;
+        .menu{
+            position:absolute;
+            top:2rem;
+            left:2rem;
+            display:none;
 
-            p{
-                margin-top:.5rem;
-                color:$grey;
-                font-size:1.2rem;
+            &:after{
+                @extend %float-clear;
+            }
 
-                &.type{
-                    margin:1rem 0 0 0;
-                    color:$black;
-                    font-size:1.6rem;
-                    font-weight:700;
+            li{
+                float:left;
+                position: relative;
+                margin-left:1rem;
+                padding-left:1rem;
+
+                &:first-child{
+                    margin-left:0;
+                    padding-left:0;
+
+                    &:before{
+                        display:none;
+                    }
                 }
 
-                &.rank{
-                    margin:2rem 0 1rem;
-                    color:$black;
+                &:before{
+                    content:'';
+                    display: block;
+                    position: absolute;
+                    top:.1rem;
+                    left:0;
+                    width:.1rem;
+                    height:1.1rem;
+                    background-color:$grey-lighten-1;
+                }
+
+                &.on{
+                    a{
+                        color:$black;
+                        font-weight: bold;
+                    }
+                }
+
+                a{
+                    display: inline-block;
+                    color:$grey;
                     font-size:1.4rem;
+                    text-decoration:none;
                 }
             }
         }
 
-        .tier-icon{
-            float:right;
-            width:10rem;
-            height:10rem;
-            background:url('../../../assets/images/tier_img.png') no-repeat 0 0;
-
-            &.bronze{
-                background-position:-4px 0;
+        .box{
+            width:260px;
+            &.left{
+                float:left
             }
 
-            &.silver{
-                background-position:-98px 0;
+            &.right{
+                float:right
             }
 
-            &.gold{
-                background-position:-193px 0;
+            &:after{
+                @extend %float-clear;
             }
 
-            &.platinum{
-                background-position:-291px 0;
+            .content{
+                float:left;
+
+                p{
+                    margin-top:.5rem;
+                    color:$grey;
+                    font-size:1.2rem;
+
+                    &.type{
+                        margin:1rem 0 0 0;
+                        color:$black;
+                        font-size:1.6rem;
+                        font-weight:700;
+                    }
+
+                    &.rank{
+                        margin:2rem 0 1.5rem;
+                        color:$black;
+                        font-size:1.4rem;
+                    }
+
+                    &.figure{
+                        span{
+                            font-weight: 700;
+
+                            &.win{
+                                color:$red;
+                            }
+                            &.loss{
+                                color:$blue;
+                            }
+                            &.total{
+                                color:$black;
+                            }
+                        }
+                    }
+                }
             }
 
-            &.diamond{
-                background-position:-390px 0;
-            }
+            .tier-icon{
+                float:right;
+                width:10rem;
+                height:10rem;
+                background:url('../../../assets/images/tier_img.png') no-repeat 0 0;
 
-            &.master{
-                background-position:-489px 0;
-            }
+                &.bronze{
+                    background-position:-4px 0;
+                }
 
-            &.challenger{
-                background-position:-585px 0;
+                &.silver{
+                    background-position:-98px 0;
+                }
+
+                &.gold{
+                    background-position:-193px 0;
+                }
+
+                &.platinum{
+                    background-position:-291px 0;
+                }
+
+                &.diamond{
+                    background-position:-390px 0;
+                }
+
+                &.master{
+                    background-position:-489px 0;
+                }
+
+                &.challenger{
+                    background-position:-585px 0;
+                }
             }
         }
     }
@@ -195,6 +322,12 @@ export default {
         .player{
             float:none;
             width:100%;
+
+            .content{
+                text-align:right;
+                float:right;
+                margin-left:0;
+            }
 
             .update{
                 margin-top:0;
@@ -216,6 +349,33 @@ export default {
             float:none;
             margin-top:2rem;
             width:100%;
+
+            &:before{
+                display: none;
+            }
+
+            .menu{
+                display: block;
+            }
+
+            .box{
+                width:100%;
+
+                &.right{
+                    display:none;
+                    float:left;
+                }
+
+                .content{
+                    .type{
+                        display: none;
+                    }
+
+                    .rank{
+                        margin-top:4rem;
+                    }
+                }
+            }
         }
     }
 
@@ -229,6 +389,33 @@ export default {
             float:none;
             margin-top:2rem;
             width:100%;
+
+            &:before{
+                display: none;
+            }
+
+            .menu{
+                display: block;
+            }
+
+            .box{
+                width:100%;
+
+                &.right{
+                    display:none;
+                    float:left;
+                }
+
+                .content{
+                    .type{
+                        display: none;
+                    }
+
+                    .rank{
+                        margin-top:4rem;
+                    }
+                }
+            }
         }
     }
 
@@ -239,6 +426,33 @@ export default {
 
         .score{
             width:300px;
+
+            &:before{
+                display: none;
+            }
+
+            .menu{
+                display: block;
+            }
+
+            .box{
+                width:100%;
+
+                &.right{
+                    display:none;
+                    float:left;
+                }
+
+                .content{
+                    .type{
+                        display: none;
+                    }
+
+                    .rank{
+                        margin-top:4rem;
+                    }
+                }
+            }
         }
     }
 }
