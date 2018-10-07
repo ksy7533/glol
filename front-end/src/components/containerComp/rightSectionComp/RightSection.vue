@@ -238,33 +238,11 @@ export default {};
 
                 .content {
                     table {
-                        @extend %tbl-type-01;
+                        @extend %tbl-type-02;
 
                         tbody {
                             tr {
                                 td {
-                                    // &.champion {
-                                    //     .wrap--img {
-                                    //         display: block;
-                                    //         margin-bottom: 0.5rem;
-                                            
-                                    //         img {
-                                    //             width: 3rem;
-                                    //             height: 3rem;
-                                    //         }
-                                    //     }
-                                    // }
-
-                                    // &.score {
-                                    //     span {
-                                    //         display: block;
-
-                                    //         &.kda {
-                                    //             margin-top: 0.4rem;
-                                    //         }
-                                    //     }
-                                    // }
-
                                     &.kda{
                                         .kill{
                                             color:$blue;
@@ -295,7 +273,7 @@ export default {};
 
                 .content {
                     table {
-                        @extend %tbl-type-01;
+                        @extend %tbl-type-02;
 
                         tbody{
                             tr{

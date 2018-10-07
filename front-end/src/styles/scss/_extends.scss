@@ -108,6 +108,46 @@
 %tbl-type-01{
     width:100%;
 
+    ul.tit{
+        display:table;
+        width:100%;
+        
+        li.col{
+            text-align:center;
+            display: table-cell;
+            padding:1.2rem 0 1rem;
+            color:$white;
+            font-size:1.2rem;
+            font-weight:700;
+            background-color:$deep-purple-darken-1;
+        }
+    }
+
+    ul.list{
+        li.row{
+            // &:nth-of-type(even){
+            //     background-color:$grey-lighten-4;
+            // }
+
+            .wrap-col{
+                display:table;
+                width:100%;
+
+                .col{
+                    display: table-cell;
+                    text-align:center;
+                    vertical-align: middle;
+                    padding:1rem 0;
+                    font-size:1.2rem;
+                    border-top:1px solid #dbdbdb;
+                }
+            }
+        }
+    }
+}
+
+%tbl-type-02{
+    width:100%;
     thead{
         tr{
             th{

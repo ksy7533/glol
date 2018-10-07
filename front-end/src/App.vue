@@ -31,6 +31,10 @@ html{
   background-color:$deep-purple-lighten-5;
 }
 
+body{
+  min-width:32rem;
+}
+
 #app {
     font-family: 'NanumSquare', sans-serif;
     -webkit-font-smoothing: antialiased;
