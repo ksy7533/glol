@@ -1,5 +1,5 @@
 <template>
-    <div class="top--section" :class="$mq">
+    <div class="top-section" :class="$mq">
         <div class="player">
             <div class="wrap-img">
                 <img src="https://ddragon.leagueoflegends.com/cdn/8.16.1/img/profileicon/508.png" alt="">
@@ -15,7 +15,7 @@
             </div>
             <div class="update">
                 <p class="info">마지막 갱신 : 1일전</p>
-                <button class="btn type--01"><span>전체 전적 갱신 <i class="material-icons">autorenew</i></span></button>
+                <button class="btn type-01"><span>전체 전적 갱신 <i class="material-icons">autorenew</i></span></button>
             </div>
         </div>
 
@@ -67,24 +67,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.top--section{
+.top-section{
+    @extend %float-clear;
     margin-bottom:2rem;
-
-    &:after{
-        @extend %float-clear;
-    }
 
     .player{
         @extend %box-type-01;
+        @extend %float-clear;
         float:left;
         padding:2rem;
         width:calc(100% - 64rem);
 
-        &:after{
-            @extend %float-clear;
-        }
-
-        .top--area{
+        .top-area{
             padding:0 0 2rem 0;
         }
 
@@ -120,11 +114,8 @@ export default {
             }
 
             .tier-list{
+                @extend %float-clear;
                 margin-top:.5rem;
-
-                &:after{
-                    @extend %float-clear;
-                }
 
                 li{
                     float:left;
@@ -157,6 +148,8 @@ export default {
 
     .score{
         @extend %box-type-01;
+        @extend %float-clear;
+
         float:right;
         position: relative;
         padding:2rem;
@@ -172,19 +165,12 @@ export default {
             background-color:$grey-lighten-3;
         }
 
-        &:after{
-            @extend %float-clear;
-        }
-
         .menu{
+            @extend %float-clear;
             position:absolute;
             top:2rem;
             left:2rem;
             display:none;
-
-            &:after{
-                @extend %float-clear;
-            }
 
             li{
                 float:left;
@@ -229,17 +215,15 @@ export default {
         }
 
         .box{
+            @extend %float-clear;
             width:260px;
+
             &.left{
                 float:left
             }
 
             &.right{
                 float:right
-            }
-
-            &:after{
-                @extend %float-clear;
             }
 
             .content{

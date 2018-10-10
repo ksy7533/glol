@@ -1,16 +1,10 @@
 <template>
-    <section class="header__bottom--section">
+    <section class="header-bottom-section">
         <nav class="menu">
             <ul>
-                <li class="on">
-                    <a href="#n">최근게임정보</a>
-                </li>
-                <li>
-                    <a href="#n">시즌별게임정보</a>
-                </li>
-                <li>
-                    <a href="#n">내가속한리그</a>
-                </li>
+                <router-link to="/summoner/score" tag="li"><a>최근게임정보</a></router-link>
+                <router-link to="/summoner/champion" tag="li"><a>챔피언정보</a></router-link>
+                <router-link to="/summoner/league" tag="li"><a>내가속한리그</a></router-link>
             </ul>
         </nav>
     </section>    
@@ -23,16 +17,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header__bottom--section{
+.header-bottom-section{
     padding:0 2rem;
     background-color:$deep-purple-darken-1;
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.25);
 
     .menu{
         ul{
-            &:after{
-                @extend %float-clear;
-            }
+            @extend %float-clear;
 
             li{
                 float:left;

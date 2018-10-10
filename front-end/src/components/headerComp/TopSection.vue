@@ -1,6 +1,6 @@
 <template>
-    <section class="header__top--section" :class="$mq">
-        <div class="left--area">
+    <section class="header-top-section" :class="$mq">
+        <div class="left-area">
             <h1>
                 <a href="#n">
                     <i class="material-icons">assessment</i>
@@ -21,7 +21,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="right--area">
+        <div class="right-area">
             <div class="search">
                 <i class="material-icons">search</i>
                 <input type="text" placeholder="소환사명 입력">
@@ -38,21 +38,15 @@ export default {
 
 <style lang="scss" scoped>
 
-.header__top--section{
+.header-top-section{
+    @extend %float-clear;
     position: relative;
     padding:1rem 2rem;
     background-color:$deep-purple;
 
-    &:after{
+    .left-area{
         @extend %float-clear;
-    }
-
-    .left--area{
         float:left;
-
-        &:after{
-            @extend %float-clear;
-        }
 
         h1{
             float:left;
@@ -129,12 +123,9 @@ export default {
         }
     }
 
-    .right--area{
+    .right-area{
+        @extend %float-clear;
         float:right;
-
-        &:after{
-            @extend %float-clear;
-        }
         
         .search{
             float:right;
@@ -197,7 +188,7 @@ export default {
 
     /* mobile */
     &.mobile{
-        .left--area{
+        .left-area{
             float:none;
 
             .menu{
@@ -210,7 +201,7 @@ export default {
             }
         }
 
-        .right--area{
+        .right-area{
             float:none;
             margin-top:1rem;
 

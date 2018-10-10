@@ -22,11 +22,8 @@ export default {
 
 <style lang="scss" scoped>
 .container{
+    @extend %float-clear;
     padding:12.4rem 2rem 2rem;
-
-    &:after{
-        @extend %float-clear;
-    }
 
     &.mobile{
         padding-top:17rem;

@@ -1,12 +1,12 @@
 <template>
-    <div class="side--content" :class="$mq">
+    <div class="side-content" :class="$mq">
         <div class="mmr">
-            <button class="btn type--01"><span>개인랭크 MMR 갱신 <i class="material-icons">autorenew</i></span></button>
+            <button class="btn type-01"><span>개인랭크 MMR 갱신 <i class="material-icons">autorenew</i></span></button>
         </div>
 
-        <div class="wrap--box">
+        <div class="wrap-box">
             <div class="box prefer-champion">
-                <div class="top--area">
+                <div class="top-area">
                     <h2>선호 챔피언</h2>
                 </div>
                 <div class="content">
@@ -108,7 +108,7 @@
             </div>
 
             <div class="box prefer-position">
-                <div class="top--area">
+                <div class="top-area">
                     <h2>선호 포지션</h2>
                 </div>
                 <div class="content">
@@ -194,17 +194,14 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.side--content {
+.side-content {
     float: right;
     margin-left: 2rem;
     width: 62rem;
 
-    .wrap--box {
+    .wrap-box {
+        @extend %float-clear;
         margin-top: 2rem;
-
-        &:after {
-            @extend %float-clear;
-        }
 
         .box{
             .txt-info{
@@ -329,7 +326,7 @@ export default {};
             margin-top: 2rem;
         }
 
-        .wrap--box {
+        .wrap-box {
             .box {
                 float: none;
                 margin: 0 0 2rem 0;
@@ -347,7 +344,7 @@ export default {};
             margin-top: 2rem;
         }
 
-        .wrap--box {
+        .wrap-box {
             .box {
                 float: none;
                 margin: 0 0 2rem 0;
@@ -359,7 +356,7 @@ export default {};
     &.laptop {
         width: 30rem;
 
-        .wrap--box {
+        .wrap-box {
             .box {
                 float: none;
                 margin: 0 0 2rem 0;
