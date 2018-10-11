@@ -1,6 +1,6 @@
 <template>
 <div class="wrap-content" :class="$mq">
-    <div class="champion">
+    <div class="wrap-box">
         <div class="top-area">
             <h2>챔피언정보</h2>
             <ul class="menu">
@@ -12,7 +12,7 @@
                 </li>
             </ul>
         </div>
-        <div class="wrap-box">
+        <div class="content">
             <div class="tbl-type-01">
                 <ul class="tit">
                     <li class="col rank">순위</li>
@@ -59,11 +59,11 @@ export default {
 
 <style lang="scss" scoped>
 .wrap-content{
-    .champion{
+    .wrap-box{
         @extend %box-type-01;
         margin-top:2rem;
 
-        .wrap-box{
+        .content{
             .tbl-type-01{
                 @extend %tbl-type-01;
 
