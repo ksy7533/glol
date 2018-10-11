@@ -1,0 +1,172 @@
+@import './reset.css';
+@import './variables';
+@import './mixins';
+@import './components';
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: $deep-purple-lighten-5;
+}
+
+body {
+    min-width: 32rem;
+}
+
+.container {
+    font-family: 'NanumSquare', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+    // z-index: 1000;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    .header-top {
+        @extend %float-clear;
+        position: relative;
+        padding: 1rem 2rem;
+        background-color: $deep-purple;
+        .left-area {
+            @extend %float-clear;
+            float: left;
+            h1 {
+                float: left;
+                margin-top: 1rem;
+                a {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 2.7rem;
+                    text-decoration: none;
+                    i {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: $white;
+                    }
+                    span {
+                        display: inline-block;
+                        margin-top: .4rem;
+                        color: $white;
+                        font-size: 2.2rem;
+                        font-weight: 700;
+                        font-family: 'NanumSquare ExtraBold';
+                        text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+                    }
+                }
+            }
+            .menu {
+                float: left;
+                position: relative;
+                margin: 1.5rem 0 0 2rem;
+                padding-left: 2rem;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: .1rem;
+                    height: 1.6rem;
+                    background-color: $white;
+                }
+                ul {
+                    @extend %float-clear;
+                    li {
+                        float: left;
+                        margin-left: 1.5rem;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        a {
+                            display: inline-block;
+                            color: $grey-lighten-3;
+                            font-size: 1.6rem;
+                            text-decoration: none;
+                        }
+                        &.on {
+                            a {
+                                color: $white;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.box-center {
+    margin: 0 auto;
+    width: 40rem;
+    height: 10rem;
+    .txt {
+        p {
+            line-height: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+    .box-search {
+        @extend %float-clear;
+        margin-top: 2rem;
+        width: 100%;
+        .search {
+            position: relative;
+            i {
+                z-index: 10;
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                color: $grey-lighten-3;
+            }
+            input {
+                display: inline-block;
+                box-sizing: border-box;
+                padding: 2rem 1rem 2rem 4.5rem;
+                width: 100%;
+                height: 1.8rem;
+                line-height: 1.8rem;
+                color: $white;
+                font-size: 1.6rem;
+                outline: none;
+                border: none;
+                border-radius: 0.2rem;
+                opacity: .8;
+                background-color: $white;
+                box-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.25);
+                transition: all .2s;
+                &::placeholder {
+                    color: $grey-lighten-3;
+                }
+                &:-ms-input-placeholder {
+                    color: $grey-lighten-3;
+                }
+                &::-ms-input-placeholder {
+                    color: $grey-lighten-3;
+                }
+                &:focus {
+                    color: $black;
+                    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+                    background-color: $white;
+                    &::placeholder {
+                        color: $grey-lighten-1;
+                    }
+                    &:-ms-input-placeholder {
+                        color: $grey-lighten-1;
+                    }
+                    &::-ms-input-placeholder {
+                        color: $grey-lighten-1;
+                    }
+                }
+            }
+        }
+    }
+}

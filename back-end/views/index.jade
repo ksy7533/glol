@@ -1,5 +1,28 @@
 extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+block main-page
+  header.header
+    section.header-top
+        div.left-area
+            h1
+                a
+                    i.material-icons assessment
+                    span GLOL
+            nav.menu
+                ul
+                    li
+                        a(href='#n') 소환사정보
+                    li
+                        a(href='#n') 통계
+                    li
+                        a(href='#n') 랭킹
+  div.container
+    div.box-center
+      div.txt
+        p 
+          strong GLOL(Good Game League Of Legend)
+        p 리그오브레전드 전적검색정보 사이트
+      div.box-search
+        div.search
+          i.material-icons search
+          input(placeholder='소환사명 입력')
