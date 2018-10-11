@@ -2,7 +2,7 @@
 <div class="wrap-content" :class="$mq">
     <div class="wrap-box">
         <div class="top-area">
-            <h2>챔피언정보</h2>
+            <h2>내가속한리그</h2>
             <ul class="menu">
                 <li class="on">
                     <a href="#n">솔로랭크</a>

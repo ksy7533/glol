@@ -1,6 +1,8 @@
 <template>
     <div class="main-content" :class="$mq">
-        <router-view></router-view>
+        <transition name="slide" mode="out-in">
+            <router-view></router-view>
+        </transition>
     </div>
 </template>
 
@@ -31,6 +33,14 @@ export default {
     &.laptop{
         width:calc(100% - 320px);
     }
+}
+
+.slide-enter-active{
+    animation: fade-in 200ms ease-out forwards;
+}
+
+.slide-leave-active{
+    animation: fade-out 200ms ease-out forwards;
 }
 </style>
 

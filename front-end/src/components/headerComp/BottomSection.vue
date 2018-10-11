@@ -2,12 +2,12 @@
     <section class="header-bottom-section">
         <nav class="menu">
             <ul>
-                <router-link to="/summoner/score" tag="li"><a>최근게임정보</a></router-link>
-                <router-link to="/summoner/champion" tag="li"><a>챔피언정보</a></router-link>
-                <router-link to="/summoner/league" tag="li"><a>내가속한리그</a></router-link>
+                <router-link to="/summoner/score" activeClass="active" tag="li"><a>최근게임정보</a></router-link>
+                <router-link to="/summoner/champion" activeClass="active" tag="li"><a>챔피언정보</a></router-link>
+                <router-link to="/summoner/league" activeClass="active" tag="li"><a>내가속한리그</a></router-link>
             </ul>
         </nav>
-    </section>    
+    </section>
 </template>
 
 <script>
@@ -66,7 +66,7 @@ export default {
                     margin-left:0;
                 }
 
-                &.on{
+                &.active{
                     a{
                         font-weight:700;
                         opacity:1;

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="summoner_app">
     <v-header></v-header>
     <v-container></v-container>
   </div>
@@ -35,7 +35,7 @@ body{
   min-width:32rem;
 }
 
-#app {
+#summoner_app {
     font-family: 'NanumSquare', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
