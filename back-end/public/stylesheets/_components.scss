@@ -18,8 +18,13 @@
     }
 
     &.type-01{
-        border:1px solid $deep-purple-lighten-1;
-        background-color:$deep-purple-lighten-1;
+        border:1px solid $deep-purple-lighten-4;
+        background-color:$deep-purple-lighten-4;
+    }
+
+    &.type-02{
+        border:1px solid $grey-lighten-1;
+        background-color:$grey-lighten-1;
     }
 
     span{
