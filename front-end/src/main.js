@@ -10,20 +10,20 @@ Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
-  routes,
+    mode: 'history',
+    routes,
 });
 
 Vue.use(VueMq, {
-  breakpoints: {
-    mobile: 450,
-    tablet: 900,
-    laptop: 1450,
-    desktop: Infinity,
-  },
+    breakpoints: {
+        mobile: 450,
+        tablet: 900,
+        laptop: 1450,
+        desktop: Infinity,
+    },
 });
 
 new Vue({
-  render: h => h(App),
-  router,
-}).$mount('#app');
+    render: h => h(App),
+    router,
+}).$mount('#summoner_app');
